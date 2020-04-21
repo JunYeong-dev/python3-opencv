@@ -1,4 +1,5 @@
 import cv2
+# 다양한 데이터를 도식화 하는데 사용하는 라이브러리
 import matplotlib.pyplot as plt
 import time
 
@@ -10,6 +11,7 @@ for i in range(0, 100):
     for j in range(0, 100):
         image[i, j] = [255, 255, 255]
 print("--- %s seconds ---" % (time.time() - start_time))
+# matplotlib에서는 RGB 순서이기 때문에 BGR -> RGB로 변환
 plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
 plt.show()
 
